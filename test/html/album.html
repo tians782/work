@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<!-- <link rel="stylesheet" type="text/css" href="../assets/css/person.css"> -->
+	<style type="text/css">
+		body{margin: 0; padding: 0; font-family: 'Helvetica Neue', Roboto, STHeiti, 'microsoft YaHei'; font-weight: normal;background-color: rgb(250,250,250);}
+	.w_tab{position: relative; background-color: rgb(250,250,250);padding-left: 20px;border-bottom: 1px solid rgb(210,210,210);}
+	.w_tab > a{display: inline-block; text-decoration: none;color: rgb(51,51,51);line-height: 60px;padding: 0 10px;}
+	.w_tab > a:hover{background-color:rgb(230,230,230); }
+	.tab_st{margin-left:45px;}
+	.w_tab > em{height: 2px;background-color: rgb(49,49,49);-webkit-transition:all 0.2s;position: absolute;bottom: 0;width: 60px;}
+	.album_page.show_h5 .w_tab > em{left: 37px;}
+	.album_page.show_st .w_tab > em{left: 177px;}
+	.h5_box,.st_bsdfsdfsdfox{display: none;}
+    .show_h5 .h5_box,.show_st .st_box{display: block;}
+
+	.w_content{background-color: #fff;}
+	/*h5作品*/
+	.h5_head{margin: 0;line-height: 30px;padding-left: 30px;color: rgb(83,83,83);background-color: rgb(245,245,245);border-bottom: 1px solid rgb(234,234,234);}
+
+	.h5_list{list-style: none;margin: 0;padding: 0;}
+	.h5_item{line-height: 50px;color: rgb(112,112,112);border-bottom: 1px solid rgb(241,241,241);padding-left: 30px;text-align: center;overflow: hidden;}
+	.h5_item > span,.h5_item > a{display: inline-block;float: left;text-decoration: none;}
+	.i_title{width:49%;text-align: left; }
+	.i_date,.i_qrcode,.i_del{width: 17%;}
+    .i_qrcode,.i_del{color: rgb(29,137,221);}
+
+    .edit_box{position: absolute;width: 100%;}
+    .model_iphone{background: url(./editor/img/model_iphone.png);position: relative;background-size: 100%;width: 378px;height: 754px;margin: 40px auto 0;}
+    #edit_frame{width: 320px;height: 511px;position: absolute;top: 154px;left: 50%;border: 0;margin-left: -160px;}
+    .btn_prev, .btn_next {position: absolute;z-index: 2;bottom: 125px;left: 50%;margin-left: -50px;width: 70px;height: 150px;background-color: #eee;}
+	.btn_prev {margin-left: -280px;}
+	.btn_next {margin-left: 210px;}
+	.btn_prev:before, .btn_prev:after, .btn_next:before, .btn_next:after {content: '';display: block;position: absolute;top: 50%;left: 50%;width: 2px;height: 26px;
+  background-color: #ccc;}
+   	.btn_prev:before {-webkit-transform: rotate(20deg);margin-top: -24px;}
+	.btn_prev:after {-webkit-transform: rotate(-20deg);}
+	.btn_next:before {-webkit-transform: rotate(-20deg);margin-top: -24px;}
+	.btn_next:after {-webkit-transform: rotate(20deg);}
+
+
+	/*静态作品*/
+    
+
+
+
+	</style>
+	<link rel="stylesheet" type="text/css" href="../assets/css/album.css">
+</head>
+<body>
+	<section class='album_page show_h5'>
+		<header class='w_tab'>
+			<a href="javascript:" class='tab_h5'>Html5作品</a>
+			<a href="javascript:" class='tab_st'>静态作品</a>
+			<em></em>
+		</header>
+		<section class='w_content'>
+			<div class='h5_box'>
+				<h5 class='h5_head'>作品sdfsdf列表<span>(3)</span></h5>
+				<ul class='h5_list'>
+					<li class='h5_item'>
+						<span class='i_title'>诚挚邀请你参加我们的婚礼</span>
+						<span class='i_date'>2015.07.13</span>
+						<a href='javascript:;' class='i_qrcode'>二维码&链接</a>
+						<a href='javascript:;' class='i_del'>删除</a>
+					</li>
+				</ul>
+				<div class='edit_box'>
+					<div class='model_iphone'>
+						<iframe id='edit_frame' src="./editor/index.html?token=f61b50399b5b125869cf6250e22307a583602755"></iframe>
+					</div>
+					<a href="javascript:;" class='btn_prev' id="btn_prev"></a>
+					<a href="javascript:;" class='btn_next' id="btn_next"></a>
+				</div>
+			</div>	
+			<div class='st_box'>
+				<div class="container">
+					<div class="top_image">
+						<div class="topic">
+							<div class="photo">客照</div>
+							<h2>华丽邂逅</h2>
+							<span>摄于</span>
+							<span class="place">西班牙</span>
+						</div>
+						<img src="../assets/demo/top-img.jpg">
+						<a class="cover_change" href="javascript:;">封面</a>
+					</div>
+					<div class="message_box" id="messageBox">
+						<div class="head_icon"></div>
+						<div class="message">
+							<div class="name">
+								甘克仁
+							</div>
+							<div class="location">广州</div>
+						</div>
+					</div>
+					<div class="blk"></div>
+					<div class="content">
+						<div class="edit_panel">
+							<p>所有的时光都是被辜负被浪费后<br>
+							才能从记忆里将某一段拎出<br>
+							拍拍上面沉积的灰尘<br>
+							感叹它是最好的时光</p>
+							<div class="add_btn">
+								<a href="javascript:;" class="add_icon"></a>
+							</div>
+							<div class="menu">
+								<a class="add_words" href="javascript:;">文字</a>
+								<a class="add_photo" href="javascript:;">图片</a>
+							</div>
+						</div>
+						<div class="edit_panel">
+							<img src="../assets/demo/4-1.jpg">
+							<div class="pic_menu">
+								<a class="btn_change" href="javascript:;"></a>
+								<a class="btn_delete" href="javascript:;"></a>
+							</div>
+							<div class="add_btn">
+								<a href="javascript:;" class="add_icon"></a>
+							</div>
+							<div class="menu">
+								<a class="add_words" href="javascript:;">文字</a>
+								<a class="add_photo" href="javascript:;">图片</a>
+							</div>
+						</div>
+						<div class="edit_panel">
+							<img src="../assets/demo/4-2.jpg">
+							<div class="pic_menu">
+								<a class="btn_change" href="javascript:;"></a>
+								<a class="btn_delete" href="javascript:;"></a>
+							</div>
+							<div class="add_btn">
+								<a href="javascript:;" class="add_icon"></a>
+							</div>
+							<div class="menu">
+								<a class="add_words" href="javascript:;">文字</a>
+								<a class="add_photo" href="javascript:;">图片</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="submit_nav">
+					<a class="save" href="javascript:;">保存</a>
+					<a class="cancel" href="javascript:;">取消</a>
+				</div>
+				
+			</div>
+		</section>
+	</section>
+
+
+<script type="text/javascript" src='../assets/js/jquery.js'></script>
+<script type="text/javascript">
+	$(function(){
+		$('.tab_h5').click(function(){
+			$('.album_page').removeClass('show_st').addClass('show_h5');
+		})
+		$('.tab_st').click(function(){
+			$('.album_page').removeClass('show_h5').addClass('show_st');
+		})
+		$('body').on('click','.add_btn',function(){
+			var show = $('.edit_panel.menu_show');
+			if (show.length>0) {
+				if (show[0]==this.parentNode) {
+					show.removeClass('menu_show');
+				}else{
+					show.removeClass('menu_show');
+					$(this).parent().addClass('menu_show');
+				}
+				
+			}else{
+				$(this).parent().addClass('menu_show');
+			}
+		});
+	})
+</script>
+</body>
+</html>
